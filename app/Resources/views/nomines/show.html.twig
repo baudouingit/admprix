@@ -1,0 +1,80 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Nomine</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ nomine.id }}</td>
+            </tr>
+            <tr>
+                <th>Nominee</th>
+                <td>{{ nomine.nominee }}</td>
+            </tr>
+            <tr>
+                <th>Domaine</th>
+                <td>{{ nomine.domaine }}</td>
+            </tr>
+            <tr>
+                <th>Annee</th>
+                <td>{{ nomine.annee }}</td>
+            </tr>
+            <tr>
+                <th>Elu</th>
+                <td>{{ nomine.elu }}</td>
+            </tr>
+            <tr>
+                <th>Commentaire</th>
+                <td>{{ nomine.commentaire }}</td>
+            </tr>
+            <tr>
+                <th>Longcomm</th>
+                <td>{{ nomine.longcomm }}</td>
+            </tr>
+            <tr>
+                <th>Photo</th>
+                <td>{{ nomine.photo }}</td>
+            </tr>
+            <tr>
+                <th>Sid1</th>
+                <td>{{ nomine.sid1 }}</td>
+            </tr>
+            <tr>
+                <th>Nid1</th>
+                <td>{{ nomine.nid1 }}</td>
+            </tr>
+            <tr>
+                <th>Sid2</th>
+                <td>{{ nomine.sid2 }}</td>
+            </tr>
+            <tr>
+                <th>Nid2</th>
+                <td>{{ nomine.nid2 }}</td>
+            </tr>
+            <tr>
+                <th>Sid3</th>
+                <td>{{ nomine.sid3 }}</td>
+            </tr>
+            <tr>
+                <th>Nid3</th>
+                <td>{{ nomine.nid3 }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('nomines_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('nomines_edit', { 'id': nomine.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}
